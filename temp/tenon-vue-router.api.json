@@ -1,0 +1,4186 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.8.1",
+    "schemaVersion": 1003,
+    "oldestForwardsCompatibleVersion": 1001
+  },
+  "kind": "Package",
+  "canonicalReference": "tenon-vue-router!",
+  "docComment": "",
+  "name": "tenon-vue-router",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "tenon-vue-router!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!createMemoryHistory:function(1)",
+          "docComment": "/**\n * Creates a in-memory based history. The main purpose of this history is to handle SSR. It starts in a special location that is nowhere. It's up to the user to replace that location with the starter location by either calling `router.push` or `router.replace`.\n *\n * @param base - Base applied to all urls, defaults to '/'\n *\n * @returns a history object that can be passed to the router constructor\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createMemoryHistory(base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterHistory",
+              "canonicalReference": "tenon-vue-router!RouterHistory:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "createMemoryHistory"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!createRouter:function(1)",
+          "docComment": "/**\n * Creates a Router instance that can be used by a Vue app.\n *\n * @param options - {@link RouterOptions}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createRouter(options: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterOptions",
+              "canonicalReference": "tenon-vue-router!RouterOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Router",
+              "canonicalReference": "tenon-vue-router!Router:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "createRouter"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!createTenonHistory:function(1)",
+          "docComment": "/**\n * Creates a in-memory based history. The main purpose of this history is to handle SSR. It starts in a special location that is nowhere. It's up to the user to replace that location with the starter location by either calling `router.push` or `router.replace`.\n *\n * @param base - Base applied to all urls, defaults to '/'\n *\n * @returns a history object that can be passed to the router constructor\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createTenonHistory(base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterHistory",
+              "canonicalReference": "tenon-vue-router!RouterHistory:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "createTenonHistory"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!createWebHashHistory:function(1)",
+          "docComment": "/**\n * Creates a hash history. Useful for web applications with no host (e.g. `file://`) or when configuring a server to handle any URL is not possible.\n *\n * @param base - optional base to provide. Defaults to `location.pathname + location.search` If there is a `<base>` tag in the `head`, its value will be ignored in favor of this parameter **but note it affects all the history.pushState() calls**, meaning that if you use a `<base>` tag, it's `href` value **has to match this parameter** (ignoring anything after the `#`).\n *\n * @example\n * ```js\n * // at https://example.com/folder\n * createWebHashHistory() // gives a url of `https://example.com/folder#`\n * createWebHashHistory('/folder/') // gives a url of `https://example.com/folder/#`\n * // if the `#` is provided in the base, it won't be added by `createWebHashHistory`\n * createWebHashHistory('/folder/#/app/') // gives a url of `https://example.com/folder/#/app/`\n * // you should avoid doing this because it changes the original url and breaks copying urls\n * createWebHashHistory('/other-folder/') // gives a url of `https://example.com/other-folder/#`\n *\n * // at file:///usr/etc/folder/index.html\n * // for locations with no `host`, the base is ignored\n * createWebHashHistory('/iAmIgnored') // gives a url of `file:///usr/etc/folder/index.html#`\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createWebHashHistory(base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterHistory",
+              "canonicalReference": "tenon-vue-router!RouterHistory:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "createWebHashHistory"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!createWebHistory:function(1)",
+          "docComment": "/**\n * Creates an HTML5 history. Most common history for single page applications.\n *\n * @param base - \n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createWebHistory(base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterHistory",
+              "canonicalReference": "tenon-vue-router!RouterHistory:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "createWebHistory"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!HistoryState:interface",
+          "docComment": "/**\n * Allowed HTML history.state\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface HistoryState "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "HistoryState",
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "tenon-vue-router!HistoryState:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[x: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HistoryStateValue",
+                  "canonicalReference": "tenon-vue-router!~HistoryStateValue:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "x",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "tenon-vue-router!HistoryState:index(2)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[x: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HistoryStateValue",
+                  "canonicalReference": "tenon-vue-router!~HistoryStateValue:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 2,
+              "parameters": [
+                {
+                  "parameterName": "x",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!isNavigationFailure:function(1)",
+          "docComment": "/**\n * Check if an object is a {@link NavigationFailure}.\n *\n * @param error - possible {@link NavigationFailure}\n *\n * @param type - optional types to check for\n *\n * @example\n * ```js\n * import { isNavigationFailure, NavigationFailureType } from 'vue-router'\n *\n * router.afterEach((to, from, failure) => {\n *   // Any kind of navigation failure\n *   if (isNavigationFailure(failure)) {\n *     // ...\n *   }\n *   // Only duplicated navigations\n *   if (isNavigationFailure(failure, NavigationFailureType.duplicated)) {\n *     // ...\n *   }\n *   // Aborted or canceled navigations\n *   if (isNavigationFailure(failure, NavigationFailureType.aborted | NavigationFailureType.canceled)) {\n *     // ...\n *   }\n * })\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNavigationFailure(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", type?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ErrorTypes.NAVIGATION_GUARD_REDIRECT",
+              "canonicalReference": "tenon-vue-router!ErrorTypes.NAVIGATION_GUARD_REDIRECT:member"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "tenon-vue-router!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationRedirectError",
+              "canonicalReference": "tenon-vue-router!NavigationRedirectError:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "type",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "name": "isNavigationFailure"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!isNavigationFailure:function(2)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNavigationFailure(error: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", type?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ErrorTypes",
+              "canonicalReference": "tenon-vue-router!ErrorTypes:enum"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationFailureType",
+              "canonicalReference": "tenon-vue-router!NavigationFailureType:enum"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "error",
+              "canonicalReference": "tenon-vue-router!~error"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationFailure",
+              "canonicalReference": "tenon-vue-router!NavigationFailure:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 10
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 2,
+          "parameters": [
+            {
+              "parameterName": "error",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "type",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 6
+              }
+            }
+          ],
+          "name": "isNavigationFailure"
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!LocationQuery:type",
+          "docComment": "/**\n * Normalized query object that appears in {@link RouteLocationNormalized}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type LocationQuery = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationQueryValue",
+              "canonicalReference": "tenon-vue-router!LocationQueryValue:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationQueryValue",
+              "canonicalReference": "tenon-vue-router!LocationQueryValue:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "LocationQuery",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!LocationQueryRaw:type",
+          "docComment": "/**\n * Loose {@link LocationQuery} object that can be passed to functions like {@link Router.push} and {@link Router.replace} or anywhere when creating a {@link RouteLocationRaw}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type LocationQueryRaw = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string | number, "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationQueryValueRaw",
+              "canonicalReference": "tenon-vue-router!LocationQueryValueRaw:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationQueryValueRaw",
+              "canonicalReference": "tenon-vue-router!LocationQueryValueRaw:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "LocationQueryRaw",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!NavigationFailure:interface",
+          "docComment": "/**\n * Extended Error that contains extra information regarding a failed navigation.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NavigationFailure extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Error",
+              "canonicalReference": "!Error:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NavigationFailure",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!NavigationFailure#from:member",
+              "docComment": "/**\n * Route location we were navigating from\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "from",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!NavigationFailure#to:member",
+              "docComment": "/**\n * Route location we were navigating to\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "to",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!NavigationFailure#type:member",
+              "docComment": "/**\n * Type of the navigation. One of {@link NavigationFailureType}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ErrorTypes.NAVIGATION_CANCELLED",
+                  "canonicalReference": "tenon-vue-router!ErrorTypes.NAVIGATION_CANCELLED:member"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ErrorTypes.NAVIGATION_ABORTED",
+                  "canonicalReference": "tenon-vue-router!ErrorTypes.NAVIGATION_ABORTED:member"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ErrorTypes.NAVIGATION_DUPLICATED",
+                  "canonicalReference": "tenon-vue-router!ErrorTypes.NAVIGATION_DUPLICATED:member"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 6
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Enum",
+          "canonicalReference": "tenon-vue-router!NavigationFailureType:enum",
+          "docComment": "/**\n * Enumeration with all possible types for navigation failures. Can be passed to {@link isNavigationFailure} to check for specific failures.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare enum NavigationFailureType "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NavigationFailureType",
+          "members": [
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "tenon-vue-router!NavigationFailureType.aborted:member",
+              "docComment": "/**\n * An aborted navigation is a navigation that failed because a navigation guard returned `false` or called `next(false)`\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "aborted = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "4"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "aborted",
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "tenon-vue-router!NavigationFailureType.cancelled:member",
+              "docComment": "/**\n * A cancelled navigation is a navigation that failed because a more recent navigation finished started (not necessarily finished).\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "cancelled = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "8"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "cancelled",
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "EnumMember",
+              "canonicalReference": "tenon-vue-router!NavigationFailureType.duplicated:member",
+              "docComment": "/**\n * A duplicated navigation is a navigation that failed because it was initiated while already being at the exact same location.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "duplicated = "
+                },
+                {
+                  "kind": "Content",
+                  "text": "16"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "duplicated",
+              "initializerTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!NavigationGuard:interface",
+          "docComment": "/**\n * Navigation guard. See [Navigation Guards](/guide/advanced/navigation-guards.md).\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NavigationGuard "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NavigationGuard",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuard:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", next: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardNext",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardNext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardReturn",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardReturn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardReturn",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardReturn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 13
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "from",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "next",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!NavigationGuardNext:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NavigationGuardNext "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NavigationGuardNext",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardNext:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": []
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardNext:call(2)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(error: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Error",
+                  "canonicalReference": "!Error:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 2,
+              "parameters": [
+                {
+                  "parameterName": "error",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardNext:call(3)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(location: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationRaw",
+                  "canonicalReference": "tenon-vue-router!RouteLocationRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 3,
+              "parameters": [
+                {
+                  "parameterName": "location",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardNext:call(4)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(valid: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 4,
+              "parameters": [
+                {
+                  "parameterName": "valid",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardNext:call(5)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(cb: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardNextCallback",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardNextCallback:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 5,
+              "parameters": [
+                {
+                  "parameterName": "cb",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!NavigationGuardWithThis:interface",
+          "docComment": "/**\n * Navigation guard. See [Navigation Guards](/guide/advanced/navigation-guards.md).\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NavigationGuardWithThis<T> "
+            }
+          ],
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "NavigationGuardWithThis",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationGuardWithThis:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(this: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", next: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardNext",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardNext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardReturn",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardReturn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardReturn",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardReturn:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 9,
+                "endIndex": 15
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "this",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "from",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  }
+                },
+                {
+                  "parameterName": "next",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 8
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!NavigationHookAfter:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NavigationHookAfter "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NavigationHookAfter",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!NavigationHookAfter:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", failure?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationFailure",
+                  "canonicalReference": "tenon-vue-router!NavigationFailure:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | void"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "from",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "failure",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 7
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!onBeforeRouteLeave:function(1)",
+          "docComment": "/**\n * Add a navigation guard that triggers whenever the component for the current location is about to be left. Similar to {@link beforeRouteLeave} but can be used in any component. The guard is removed when the component is unmounted.\n *\n * @param leaveGuard - {@link NavigationGuard}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function onBeforeRouteLeave(leaveGuard: "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationGuard",
+              "canonicalReference": "tenon-vue-router!NavigationGuard:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "leaveGuard",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "onBeforeRouteLeave"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!onBeforeRouteUpdate:function(1)",
+          "docComment": "/**\n * Add a navigation guard that triggers whenever the current location is about to be updated. Similar to {@link beforeRouteUpdate} but can be used in any component. The guard is removed when the component is unmounted.\n *\n * @param updateGuard - {@link NavigationGuard}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function onBeforeRouteUpdate(updateGuard: "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationGuard",
+              "canonicalReference": "tenon-vue-router!NavigationGuard:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "updateGuard",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "onBeforeRouteUpdate"
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!PathParserOptions:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type PathParserOptions = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Pick",
+              "canonicalReference": "!Pick:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "_PathParserOptions",
+              "canonicalReference": "tenon-vue-router!_PathParserOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", 'end' | 'sensitive' | 'strict'>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "PathParserOptions",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteComponent:type",
+          "docComment": "/**\n * Allowed Component in {@link RouteLocationMatched}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteComponent = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Component",
+              "canonicalReference": "@vue/runtime-core!Component:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteComponent",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteLocation:interface",
+          "docComment": "/**\n * {@link RouteLocationRaw} resolved using the matcher\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteLocation extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "_RouteLocationBase",
+              "canonicalReference": "tenon-vue-router!_RouteLocationBase:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocation",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocation#matched:member",
+              "docComment": "/**\n * Array of {@link RouteRecord} containing components as they were passed when adding records. It can also contain redirect records. This can't be used directly\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "matched: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecord",
+                  "canonicalReference": "tenon-vue-router!RouteRecord:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "matched",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteLocationMatched:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteLocationMatched extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteRecordNormalized",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocationMatched",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationMatched#components:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "components: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteComponent",
+                  "canonicalReference": "tenon-vue-router!RouteComponent:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "components",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface",
+          "docComment": "/**\n * Similar to {@link RouteLocation} but its {@link RouteLocationNormalized.matched} cannot contain redirect records\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteLocationNormalized extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "_RouteLocationBase",
+              "canonicalReference": "tenon-vue-router!_RouteLocationBase:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocationNormalized",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationNormalized#matched:member",
+              "docComment": "/**\n * Array of {@link RouteRecordNormalized}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "matched: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteRecordNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "matched",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded:interface",
+          "docComment": "/**\n * {@link RouteLocationRaw} with\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteLocationNormalizedLoaded extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "_RouteLocationBase",
+              "canonicalReference": "tenon-vue-router!_RouteLocationBase:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocationNormalizedLoaded",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded#matched:member",
+              "docComment": "/**\n * Array of {@link RouteLocationMatched} containing only plain components (any lazy-loaded components have been loaded and were replaced inside of the `components` object) so it can be directly used to display routes. It cannot contain redirect records either\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "matched: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationMatched",
+                  "canonicalReference": "tenon-vue-router!RouteLocationMatched:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "matched",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteLocationOptions:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteLocationOptions "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocationOptions",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationOptions#force:member",
+              "docComment": "/**\n * Triggers the navigation even if the location is the same as the current one\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "force?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "force",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationOptions#replace:member",
+              "docComment": "/**\n * Replace the entry in the history instead of pushing a new entry\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "replace?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "replace",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteLocationOptions#state:member",
+              "docComment": "/**\n * State to save using the History API. This cannot contain any reactive values and some primitives like Symbols are forbidden. More info at https://developer.mozilla.org/en-US/docs/Web/API/History/state\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "state?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HistoryState",
+                  "canonicalReference": "tenon-vue-router!HistoryState:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "state",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteLocationRaw:type",
+          "docComment": "/**\n * User-level route location\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteLocationRaw = "
+            },
+            {
+              "kind": "Content",
+              "text": "string | ("
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteQueryAndHash",
+              "canonicalReference": "tenon-vue-router!RouteQueryAndHash:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationAsPath",
+              "canonicalReference": "tenon-vue-router!LocationAsPath:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteLocationOptions",
+              "canonicalReference": "tenon-vue-router!RouteLocationOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") | ("
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteQueryAndHash",
+              "canonicalReference": "tenon-vue-router!RouteQueryAndHash:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "LocationAsRelativeRaw",
+              "canonicalReference": "tenon-vue-router!LocationAsRelativeRaw:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteLocationOptions",
+              "canonicalReference": "tenon-vue-router!RouteLocationOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ")"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteLocationRaw",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 14
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteMeta:interface",
+          "docComment": "/**\n * Interface to type `meta` fields in route records.\n *\n * @example\n * ```ts\n * declare module 'vue-router' {\n *   interface RouteMeta {\n *     requiresAuth?: boolean\n *   }\n *  }\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteMeta extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string | number | symbol, unknown> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteMeta",
+          "members": [],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteParams:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteParams = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteParamValue",
+              "canonicalReference": "tenon-vue-router!RouteParamValue:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteParamValue",
+              "canonicalReference": "tenon-vue-router!RouteParamValue:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteParams",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteParamsRaw:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteParamsRaw = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteParamValueRaw",
+              "canonicalReference": "tenon-vue-router!RouteParamValueRaw:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteParamValueRaw",
+              "canonicalReference": "tenon-vue-router!RouteParamValueRaw:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteParamsRaw",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!Router:interface",
+          "docComment": "/**\n * Router instance\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Router "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Router",
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#addRoute:member(1)",
+              "docComment": "/**\n * Add a new {@link RouteRecordRaw | Route Record} as the child of an existing route.\n *\n * @param parentName - Parent Route Record where `route` should be appended at\n *\n * @param route - Route Record to add\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addRoute(parentName: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordName",
+                  "canonicalReference": "tenon-vue-router!RouteRecordName:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", route: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordRaw",
+                  "canonicalReference": "tenon-vue-router!RouteRecordRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "parentName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "route",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                }
+              ],
+              "name": "addRoute"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#addRoute:member(2)",
+              "docComment": "/**\n * Add a new {@link RouteRecordRaw | route record} to the router.\n *\n * @param route - Route Record to add\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "addRoute(route: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordRaw",
+                  "canonicalReference": "tenon-vue-router!RouteRecordRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 2,
+              "parameters": [
+                {
+                  "parameterName": "route",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "addRoute"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#afterEach:member(1)",
+              "docComment": "/**\n * Add a navigation hook that is executed after every navigation. Returns a function that removes the registered hook.\n *\n * @param guard - navigation hook to add\n *\n * @example\n * ```js\n * router.afterEach((to, from, failure) => {\n *   if (isNavigationFailure(failure)) {\n *     console.log('failed navigation', failure)\n *   }\n * })\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "afterEach(guard: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationHookAfter",
+                  "canonicalReference": "tenon-vue-router!NavigationHookAfter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "guard",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "afterEach"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#back:member(1)",
+              "docComment": "/**\n * Go back in history if possible by calling `history.back()`. Equivalent to `router.go(-1)`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "back(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Router",
+                  "canonicalReference": "tenon-vue-router!Router:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['go']>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "back"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#beforeEach:member(1)",
+              "docComment": "/**\n * Add a navigation guard that executes before any navigation. Returns a function that removes the registered guard.\n *\n * @param guard - navigation guard to add\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "beforeEach(guard: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardWithThis",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardWithThis:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<undefined>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "guard",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  }
+                }
+              ],
+              "name": "beforeEach"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#beforeResolve:member(1)",
+              "docComment": "/**\n * Add a navigation guard that executes before navigation is about to be resolved. At this state all component have been fetched and other navigation guards have been successful. Returns a function that removes the registered guard.\n *\n * @param guard - navigation guard to add\n *\n * @example\n * ```js\n * router.beforeEach(to => {\n *   if (to.meta.requiresAuth && !isAuthenticated) return false\n * })\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "beforeResolve(guard: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationGuardWithThis",
+                  "canonicalReference": "tenon-vue-router!NavigationGuardWithThis:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<undefined>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "guard",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  }
+                }
+              ],
+              "name": "beforeResolve"
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!Router#currentRoute:member",
+              "docComment": "/**\n * Current {@link RouteLocationNormalized}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly currentRoute: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Ref",
+                  "canonicalReference": "@vue/reactivity!Ref:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalizedLoaded",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "currentRoute",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#forward:member(1)",
+              "docComment": "/**\n * Go forward in history if possible by calling `history.forward()`. Equivalent to `router.go(1)`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "forward(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReturnType",
+                  "canonicalReference": "!ReturnType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Router",
+                  "canonicalReference": "tenon-vue-router!Router:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['go']>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "forward"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#getRoutes:member(1)",
+              "docComment": "/**\n * Get a full list of all the {@link RouteRecord | route records}.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getRoutes(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecord",
+                  "canonicalReference": "tenon-vue-router!RouteRecord:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "getRoutes"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#go:member(1)",
+              "docComment": "/**\n * Allows you to move forward or backward through the history. Calls `history.go()`.\n *\n * @param delta - The position in the history to which you want to move, relative to the current page\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "go(delta: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "delta",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "go"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#hasRoute:member(1)",
+              "docComment": "/**\n * Checks if a route with a given name exists\n *\n * @param name - Name of the route to check\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "hasRoute(name: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordName",
+                  "canonicalReference": "tenon-vue-router!RouteRecordName:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "hasRoute"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#isReady:member(1)",
+              "docComment": "/**\n * Returns a Promise that resolves when the router has completed the initial navigation, which means it has resolved all async enter hooks and async components that are associated with the initial route. If the initial navigation already happened, the promise resolves immediately.\n *\n * This is useful in server-side rendering to ensure consistent output on both the server and the client. Note that on server side, you need to manually push the initial location while on client side, the router automatically picks it up from the URL.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isReady(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "isReady"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#onError:member(1)",
+              "docComment": "/**\n * Adds an error handler that is called every time a non caught error happens during navigation. This includes errors thrown synchronously and asynchronously, errors returned or passed to `next` in any navigation guard, and errors occurred when trying to resolve an async component that is required to render a route.\n *\n * @param handler - error handler to register\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "onError(handler: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_ErrorHandler",
+                  "canonicalReference": "tenon-vue-router!_ErrorHandler:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "handler",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "onError"
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!Router#options:member",
+              "docComment": "/**\n * Original options object passed to create the Router\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly options: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouterOptions",
+                  "canonicalReference": "tenon-vue-router!RouterOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "options",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#push:member(1)",
+              "docComment": "/**\n * Programmatically navigate to a new URL by pushing an entry in the history stack.\n *\n * @param to - Route location to navigate to\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "push(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationRaw",
+                  "canonicalReference": "tenon-vue-router!RouteLocationRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationFailure",
+                  "canonicalReference": "tenon-vue-router!NavigationFailure:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | void | undefined>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "push"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#removeRoute:member(1)",
+              "docComment": "/**\n * Remove an existing route by its name.\n *\n * @param name - Name of the route to remove\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "removeRoute(name: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordName",
+                  "canonicalReference": "tenon-vue-router!RouteRecordName:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "removeRoute"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#replace:member(1)",
+              "docComment": "/**\n * Programmatically navigate to a new URL by replacing the current entry in the history stack.\n *\n * @param to - Route location to navigate to\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "replace(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationRaw",
+                  "canonicalReference": "tenon-vue-router!RouteLocationRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "NavigationFailure",
+                  "canonicalReference": "tenon-vue-router!NavigationFailure:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | void | undefined>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "replace"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "tenon-vue-router!Router#resolve:member(1)",
+              "docComment": "/**\n * Returns the {@link RouteLocation | normalized version} of a {@link RouteLocationRaw | route location}. Also includes an `href` property that includes any existing `base`.\n *\n * @param to - Raw route location to resolve\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "resolve(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationRaw",
+                  "canonicalReference": "tenon-vue-router!RouteLocationRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocation",
+                  "canonicalReference": "tenon-vue-router!RouteLocation:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " & {\n        href: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "resolve"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteRecord:type",
+          "docComment": "/**\n * Normalized version of a {@link RouteRecord | Route Record}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteRecord = "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteRecordNormalized",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteRecord",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteRecordName:type",
+          "docComment": "/**\n * Possible values for a user-defined route record's name\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteRecordName = "
+            },
+            {
+              "kind": "Content",
+              "text": "string | symbol"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteRecordName",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouteRecordNormalized:interface",
+          "docComment": "/**\n * Normalized version of a {@link RouteRecord | Route Record}\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouteRecordNormalized "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteRecordNormalized",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#aliasOf:member",
+              "docComment": "/**\n * Defines if this record is the alias of another one. This property is `undefined` if the record is the original one.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "aliasOf: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteRecordNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "aliasOf",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#beforeEnter:member",
+              "docComment": "/**\n * Registered beforeEnter guards\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "beforeEnter: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['beforeEnter']"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "beforeEnter",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#children:member",
+              "docComment": "/**\n * {@inheritDoc _RouteRecordBase.components}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "children: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Exclude",
+                  "canonicalReference": "!Exclude:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['children'], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "children",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#components:member",
+              "docComment": "/**\n * {@inheritDoc RouteRecordMultipleViews.components}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "components: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordMultipleViews",
+                  "canonicalReference": "tenon-vue-router!RouteRecordMultipleViews:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['components']"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "components",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#instances:member",
+              "docComment": "/**\n * Mounted route component instances Having the instances on the record mean beforeRouteUpdate and beforeRouteLeave guards can only be invoked with the latest mounted app instance if there are multiple application instances rendering the same view, basically duplicating the content on the page, which shouldn't happen in practice. It will work if multiple apps are rendering different named views.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "instances: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ComponentPublicInstance",
+                  "canonicalReference": "@vue/runtime-core!ComponentPublicInstance:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | undefined | null>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "instances",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#meta:member",
+              "docComment": "/**\n * Arbitrary data attached to the record.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "meta: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Exclude",
+                  "canonicalReference": "!Exclude:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['meta'], void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "meta",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#name:member",
+              "docComment": "/**\n * Name for the route record.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['name']"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#path:member",
+              "docComment": "/**\n * Path of the record. Should start with `/` unless the record is the child of another record.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "path: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['path']"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "path",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#props:member",
+              "docComment": "/**\n * {@inheritDoc RouteRecordMultipleViews.props}\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "props: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string, "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordProps",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordProps:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "props",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouteRecordNormalized#redirect:member",
+              "docComment": "/**\n * Where to redirect if the route is directly matched. The redirection happens before any navigation guard and triggers a new navigation with the new target location.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "redirect: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_RouteRecordBase",
+                  "canonicalReference": "tenon-vue-router!_RouteRecordBase:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "['redirect'] | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "redirect",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!RouteRecordRaw:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type RouteRecordRaw = "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteRecordSingleView",
+              "canonicalReference": "tenon-vue-router!RouteRecordSingleView:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteRecordMultipleViews",
+              "canonicalReference": "tenon-vue-router!RouteRecordMultipleViews:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteRecordRedirect",
+              "canonicalReference": "tenon-vue-router!RouteRecordRedirect:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouteRecordRaw",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "tenon-vue-router!RouterLink:var",
+          "docComment": "/**\n * Component to render a link that triggers a navigation on click.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "RouterLink: "
+            },
+            {
+              "kind": "Content",
+              "text": "new () => {\n    $props: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllowedComponentProps",
+              "canonicalReference": "@vue/runtime-core!AllowedComponentProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "ComponentCustomProps",
+              "canonicalReference": "@vue/runtime-core!ComponentCustomProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "VNodeProps",
+              "canonicalReference": "@vue/runtime-core!VNodeProps:type"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterLinkProps",
+              "canonicalReference": "tenon-vue-router!RouterLinkProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterLink",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 10
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouterLinkProps:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouterLinkProps extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterLinkOptions",
+              "canonicalReference": "tenon-vue-router!RouterLinkOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterLinkProps",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterLinkProps#activeClass:member",
+              "docComment": "/**\n * Class to apply when the link is active\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "activeClass?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "activeClass",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterLinkProps#ariaCurrentValue:member",
+              "docComment": "/**\n * Value passed to the attribute `aria-current` when the link is exact active. Defaults to \"page\"\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ariaCurrentValue?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "'page' | 'step' | 'location' | 'date' | 'time' | 'true' | 'false'"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "ariaCurrentValue",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterLinkProps#custom:member",
+              "docComment": "/**\n * Whether RouterLink should not wrap its content in an `a` tag. Useful when using `v-slot` to create a custom RouterLink\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "custom?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "custom",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterLinkProps#exactActiveClass:member",
+              "docComment": "/**\n * Class to apply when the link is exact active\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "exactActiveClass?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "exactActiveClass",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouterOptions:interface",
+          "docComment": "/**\n * Options to initialize a {@link Router} instance.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouterOptions extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "PathParserOptions",
+              "canonicalReference": "tenon-vue-router!PathParserOptions:type"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterOptions",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#history:member",
+              "docComment": "/**\n * History implementation used by the router. Most web applications should use `createWebHistory` but it requires the server to be properly configured. You can also use a _hash_ based history with `createWebHashHistory` that does not require any configuration on the server but isn't handled at all by search engines and does poorly on SEO.\n *\n * @example\n * ```js\n * createRouter({\n *   history: createWebHistory(),\n *   // other options...\n * })\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "history: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouterHistory",
+                  "canonicalReference": "tenon-vue-router!RouterHistory:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "history",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#linkActiveClass:member",
+              "docComment": "/**\n * Default class applied to active {@link RouterLink}. If none is provided, `router-link-active` will be applied.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "linkActiveClass?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "linkActiveClass",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#linkExactActiveClass:member",
+              "docComment": "/**\n * Default class applied to exact active {@link RouterLink}. If none is provided, `router-link-exact-active` will be applied.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "linkExactActiveClass?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "linkExactActiveClass",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#parseQuery:member",
+              "docComment": "/**\n * Custom implementation to parse a query. See its counterpart, {@link RouterOptions.stringifyQuery}.\n *\n * @example\n *\n * Let's say you want to use the package {@link https://github.com/ljharb/qs | qs} to parse queries, you can provide both `parseQuery` and `stringifyQuery`:\n * ```js\n * import qs from 'qs'\n *\n * createRouter({\n *   // other options...\n *   parse: qs.parse,\n *   stringifyQuery: qs.stringify,\n * })\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "parseQuery?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "originalParseQuery",
+                  "canonicalReference": "tenon-vue-router!parseQuery:function"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "parseQuery",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#routes:member",
+              "docComment": "/**\n * Initial list of routes that should be added to the router.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "routes: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteRecordRaw",
+                  "canonicalReference": "tenon-vue-router!RouteRecordRaw:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "routes",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#scrollBehavior:member",
+              "docComment": "/**\n * Function to control scrolling when navigating between pages. Can return a Promise to delay scrolling. Check {@link ScrollBehavior}.\n *\n * @example\n * ```js\n * function scrollBehavior(to, from, savedPosition) {\n *   // `to` and `from` are both route locations\n *   // `savedPosition` can be null if there isn't one\n * }\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "scrollBehavior?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouterScrollBehavior",
+                  "canonicalReference": "tenon-vue-router!RouterScrollBehavior:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "scrollBehavior",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterOptions#stringifyQuery:member",
+              "docComment": "/**\n * Custom implementation to stringify a query object. Should not prepend a leading `?`. {@link RouterOptions.parseQuery | parseQuery} counterpart to handle query parsing.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "stringifyQuery?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "originalStringifyQuery",
+                  "canonicalReference": "tenon-vue-router!stringifyQuery:function"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "stringifyQuery",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouterScrollBehavior:interface",
+          "docComment": "/**\n * Type of the `scrollBehavior` option that can be passed to `createRouter`.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouterScrollBehavior "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterScrollBehavior",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "tenon-vue-router!RouterScrollBehavior:call(1)",
+              "docComment": "/**\n * @param to - Route location where we are navigating to\n *\n * @param from - Route location where we are navigating from\n *\n * @param savedPosition - saved position if it exists, `null` otherwise\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(to: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", from: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalizedLoaded",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", savedPosition: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "_ScrollPositionNormalized",
+                  "canonicalReference": "tenon-vue-router!_ScrollPositionNormalized:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | null"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Awaitable",
+                  "canonicalReference": "tenon-vue-router!~Awaitable:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ScrollPosition",
+                  "canonicalReference": "tenon-vue-router!ScrollPosition:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | false | void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 12
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "to",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "from",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "savedPosition",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 7
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "tenon-vue-router!RouterView:var",
+          "docComment": "/**\n * Component to display the current route the user is at.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "RouterView: "
+            },
+            {
+              "kind": "Content",
+              "text": "new () => {\n    $props: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllowedComponentProps",
+              "canonicalReference": "@vue/runtime-core!AllowedComponentProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "ComponentCustomProps",
+              "canonicalReference": "@vue/runtime-core!ComponentCustomProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "VNodeProps",
+              "canonicalReference": "@vue/runtime-core!VNodeProps:type"
+            },
+            {
+              "kind": "Content",
+              "text": " & "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterViewProps",
+              "canonicalReference": "tenon-vue-router!RouterViewProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterView",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 10
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tenon-vue-router!RouterViewProps:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RouterViewProps "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RouterViewProps",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterViewProps#name:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tenon-vue-router!RouterViewProps#route:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "route?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RouteLocationNormalized",
+                  "canonicalReference": "tenon-vue-router!RouteLocationNormalized:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "releaseTag": "Public",
+              "name": "route",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "tenon-vue-router!START_LOCATION:var",
+          "docComment": "/**\n * Initial route location where the router is. Can be used in navigation guards to differentiate the initial navigation.\n *\n * @example\n * ```js\n * import { START_LOCATION } from 'vue-router'\n *\n * router.beforeEach((to, from) => {\n *   if (from === START_LOCATION) {\n *     // initial navigation\n *   }\n * })\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "START_LOCATION_NORMALIZED: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteLocationNormalizedLoaded",
+              "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded:interface"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "START_LOCATION",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!useLink:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function useLink(props: "
+            },
+            {
+              "kind": "Reference",
+              "text": "UseLinkOptions",
+              "canonicalReference": "tenon-vue-router!UseLinkOptions:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    route: import(\"@vue/reactivity\")."
+            },
+            {
+              "kind": "Reference",
+              "text": "ComputedRef",
+              "canonicalReference": "@vue/reactivity!ComputedRef:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteLocation",
+              "canonicalReference": "tenon-vue-router!RouteLocation:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " & {\n        href: string;\n    }>;\n    href: import(\"@vue/reactivity\")."
+            },
+            {
+              "kind": "Reference",
+              "text": "ComputedRef",
+              "canonicalReference": "@vue/reactivity!ComputedRef:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>;\n    isActive: import(\"@vue/reactivity\")."
+            },
+            {
+              "kind": "Reference",
+              "text": "ComputedRef",
+              "canonicalReference": "@vue/reactivity!ComputedRef:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<boolean>;\n    isExactActive: import(\"@vue/reactivity\")."
+            },
+            {
+              "kind": "Reference",
+              "text": "ComputedRef",
+              "canonicalReference": "@vue/reactivity!ComputedRef:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<boolean>;\n    navigate: (e?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "MouseEvent",
+              "canonicalReference": "!MouseEvent:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<void | "
+            },
+            {
+              "kind": "Reference",
+              "text": "NavigationFailure",
+              "canonicalReference": "tenon-vue-router!NavigationFailure:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 20
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "props",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "useLink"
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "tenon-vue-router!UseLinkOptions:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type UseLinkOptions = "
+            },
+            {
+              "kind": "Reference",
+              "text": "VueUseOptions",
+              "canonicalReference": "tenon-vue-router!VueUseOptions:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "RouterLinkOptions",
+              "canonicalReference": "tenon-vue-router!RouterLinkOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "UseLinkOptions",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!useRoute:function(1)",
+          "docComment": "/**\n * Returns the current route location. Equivalent to using `$route` inside templates.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function useRoute(): "
+            },
+            {
+              "kind": "Reference",
+              "text": "RouteLocationNormalizedLoaded",
+              "canonicalReference": "tenon-vue-router!RouteLocationNormalizedLoaded:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [],
+          "name": "useRoute"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "tenon-vue-router!useRouter:function(1)",
+          "docComment": "/**\n * Returns the router instance. Equivalent to using `$router` inside templates.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function useRouter(): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Router",
+              "canonicalReference": "tenon-vue-router!Router:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [],
+          "name": "useRouter"
+        }
+      ]
+    }
+  ]
+}
